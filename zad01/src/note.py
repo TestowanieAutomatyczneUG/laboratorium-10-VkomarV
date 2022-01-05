@@ -1,7 +1,7 @@
 class Note:
 
     def __init__(self, name="note", note=4.4):
-        if type(name) is not str and name == "":
+        if type(name) is not str or name == "":
             raise Exception("Wrong type val")
         else:
             self.name = name

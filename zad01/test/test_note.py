@@ -2,6 +2,7 @@ import unittest
 from assertpy import assert_that
 from src.note import Note
 
+
 class NoteTest(unittest.TestCase):
     def test_get_name(self):
         note = Note()
@@ -15,9 +16,10 @@ class NoteTest(unittest.TestCase):
         note = Note("note", 2.0)
         assert_that(note.get_note()).is_equal_to(2.0)
 
-    def test_get_Note_max(self):
+    def test_get_note_max(self):
         note = Note("spr", 6.0)
         assert_that(note.get_note()).is_equal_to(6.0)
+
     def test_get_name_empty(self):
         self.assertRaises(Exception, Note, "")
 
